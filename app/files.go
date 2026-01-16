@@ -89,7 +89,7 @@ func post_file(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.WriteHeader(http.StatusAccepted)
-	fmt.Fprintf(w, "\"https://%s/file?id=%s&key=%s\"\n", r.Host, id.String(), key)
+	fmt.Fprintf(w, "\"https://%s/?id=%s&key=%s\"\n", r.Host, id.String(), key)
 }
 
 func get_file(w http.ResponseWriter, r *http.Request) {
